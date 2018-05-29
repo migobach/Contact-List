@@ -1,0 +1,15 @@
+
+<h1><%= params[:contact_name] %>'s Favorites</h1>
+
+<h4>Favorite Beer</h4>
+<hr />
+<% @favorite.each do |fav| %>
+  <%= fav.beer %>
+<% end %>
+
+<h4>Favorite Books</h4>
+<hr />
+<% @favorite.each do |fav| %>
+  <%= fav.book %>
+<% end %>
+
