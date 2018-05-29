@@ -6,5 +6,7 @@
 <p><%= @contact.address %></p>
 <p><%= @contact.city %> <%= @contact.state %>, <%= @contact.zip %></p>
 <hr />
+<p><%= @contact.motto %></p>
+<hr />
 <%= link_to 'Edit', edit_contact_path %>
 <%= link_to 'Delete', contact_path, method: :delete %>

@@ -16,6 +16,7 @@
     city: Faker::Address.city,
     state: Faker::Address.state_abbr,
     zip: Faker::Address.zip,
+    motto: Faker::Hacker.say_something_smart,
 )
 end
 
