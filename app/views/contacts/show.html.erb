@@ -1,0 +1,10 @@
+<h1><%= @contact.first_name %> <%= @contact.last_name %></h1>
+<hr />
+<p>Phone number: <%= @contact.phone %></p>
+<p>Email address: <%= @contact.email %></p>
+<hr />
+<p><%= @contact.address %></p>
+<p><%= @contact.city %> <%= @contact.state %>, <%= @contact.zip %></p>
+<hr />
+<%= link_to 'Edit', edit_contact_path %>
+<%= link_to 'Delete', contact_path, method: :delete %>
