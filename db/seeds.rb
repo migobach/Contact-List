@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 20.times do |contact|
-  Contact.create(
+  contact = Contact.create(
     first_name: Faker::Name.unique.first_name,
     last_name: Faker::Name.unique.last_name,
     phone: Faker::PhoneNumber.phone_number,
@@ -16,8 +16,14 @@
     city: Faker::Address.city,
     state: Faker::Address.state_abbr,
     zip: Faker::Address.zip,
-    motto: Faker::Hacker.say_something_smart,
-)
+    motto: Faker::Hacker.say_something_smart
+    )
+    5.times do |favorite|
+    contact.favorites.create(
+      beer: Faker::Beer.name,
+      book: Faker::Book.title,
+    )
+  end
 end
 
 puts 'seeded'

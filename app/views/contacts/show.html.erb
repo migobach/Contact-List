@@ -10,4 +10,4 @@
 <hr />
 <%= link_to 'Edit', edit_contact_path %>
 <%= link_to 'Delete', contact_path, method: :delete %>
-<%= link_to 'Favorite Things', favorites_show_path(contact_name: @contact.first_name) %>
+<%= link_to 'Favorite Things', favorite_path(@contact.id, contact_name: @contact.first_name) %>

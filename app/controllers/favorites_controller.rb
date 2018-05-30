@@ -1,8 +1,7 @@
 class FavoritesController < ApplicationController
 
-
   def show
-    @favorite = Favorite.all
+    @favorite = Favorite.where("contact_id = #{params[:id]}")
   end
 
   def new
